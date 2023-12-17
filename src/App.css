@@ -1,0 +1,91 @@
+* {
+  /* box-sizing: border-box; */
+}
+
+html,
+body,
+#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  justify-content: center;
+  align-items: center;
+}
+
+.pattern {
+  background-color: #fdcc03;
+  opacity: 1;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #fdcc03 20%,
+      #fdcc03 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #fdcc03 20%,
+        #fdcc03 80%,
+        transparent 80%,
+        transparent
+      )
+      32.5px 32.5px,
+    linear-gradient(#f8c200 2.6px, transparent 2.6px) 0 -1.3px,
+    linear-gradient(90deg, #f8c200 2.6px, #fdcc03 2.6px) -1.3px 0;
+  background-size: 65px 65px, 65px 65px, 32.5px 32.5px, 32.5px 32.5px;
+}
+
+.viewport-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #9e7c03;
+}
+
+.game-title {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  color: #5a1c21;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.game-title::before {
+  display: block;
+  content: "";
+  background-color: #5a1c21;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
